@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+}
+.solar-system{
+
+    width: 500px;
+    height: 500px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: auto;
+    animation: rotate 16s linear infinite;
+   
+}
+
+.sun{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 30%;
+    background-color: orange;
+    animation: sun 4s linear  infinite;
+}
+.planet{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding-top: 20px;
+    padding-right: 9px;
+    animation: rotate 9s linear infinite;
+    
+    
+}
+.earth{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: auto;
+    transform: translate(66px,60px);
+    background-color: blue;
+    animation: none;
+    
+}
+.moon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: white;
+    animation: moon 2s linear infinite;
+    color: black;
+    font-size: smaller;
+    font-weight: bold;
+    transform: translate(-10px,18px);
+}
+@keyframes sun {
+    from{
+        box-shadow: 0 0 0 0 orange;
+    }
+    to{
+        box-shadow: 0 0 50px 25px rgba(0,0,0,0);
+    }    
+}
+@keyframes moon{
+    from{
+        box-shadow: 0 0 0 0 white;
+    }
+    to{
+        box-shadow: 0 0 50px 25px rgba(0,0,0,0);
+    }    
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
